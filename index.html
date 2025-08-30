@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiE Nagpur - Fostering Entrepreneurship</title>
+    <meta name="description" content="TiE Nagpur is a non-profit organization dedicated to fostering entrepreneurship in the Nagpur region through mentoring, networking, education, funding, and incubation.">
+    <meta name="keywords" content="TiE Nagpur, entrepreneurship, startups, mentoring, networking, funding, Nagpur, business, innovation">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-website-url.com/">
+    <meta property="og:title" content="TiE Nagpur - Fostering Entrepreneurship">
+    <meta property="og:description" content="Join TiE Nagpur to connect with a global network of entrepreneurs, mentors, and investors.">
+    <meta property="og:image" content="images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-website-url.com/">
+    <meta property="twitter:title" content="TiE Nagpur - Fostering Entrepreneurship">
+    <meta property="twitter:description" content="Fostering the next wave of entrepreneurship in Central India.">
+    <meta property="twitter:image" content="images/logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tie-red { background-color: #C8102E; }
+        .tie-red-text { color: #C8102E; }
+
+        .tab-button.active {
+            @apply bg-white text-red-700 border-b-4 border-red-700;
+        }
+        .member-tab-button.active {
+            color: #C8102E;
+            border-color: #C8102E;
+        }
+        .tab-content.hidden {
+            display: none;
+        }
+        .main-tab-content.hidden {
+             display: none;
+        }
+        
+        /* Slideshow Styles */
+        .slide {
+            display: none;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+        .slide-image {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+            filter: brightness(0.6) blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="w-full px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#">
+                    <!-- Make sure logo.png is in the 'images' folder -->
+                    <img src="images/logo.png" alt="TiE Nagpur Logo" class="h-14">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="main-tab-link text-gray-600 hover:tie-red-text transition" data-tab="home">Home</a>
+                <a href="#" class="main-tab-link text-gray-600 hover:tie-red-text transition" data-tab="board">Board & Members</a>
+                <a href="#" class="main-tab-link text-gray-600 hover:tie-red-text transition" data-tab="gallery">Gallery</a>
+                <a href="#membership" class="nav-link text-gray-600 hover:tie-red-text transition">Membership</a>
+                <a href="https://events.tie.org/Foodpreneurs" target="_blank" class="text-gray-600 hover:tie-red-text transition">Register</a>
+                <a href="#contact" class="nav-link text-white px-4 py-2 rounded-full hover:bg-red-700 transition" style="background-color: #C8102E;">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#" class="main-tab-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" data-tab="home">Home</a>
+            <a href="#" class="main-tab-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" data-tab="board">Board & Members</a>
+            <a href="#" class="main-tab-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" data-tab="gallery">Gallery</a>
+            <a href="#membership" class="nav-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Membership</a>
+            <a href="https://events.tie.org/Foodpreneurs" target="_blank" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Register</a>
+            <a href="#contact" class="nav-link block py-2 px-4 text-sm text-white" style="background-color: #C8102E;">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Content -->
+        <div id="home" class="main-tab-content">
+            <!-- Slideshow Hero Section -->
+            <section id="slideshow-container" class="relative w-full h-[70vh] overflow-hidden">
+                <!-- Slides: Make sure these images are in the 'images' folder -->
+                <div class="absolute inset-0 w-full h-full">
+                    <div class="slide active"><img src="images/slide-1.jpg" class="slide-image" alt="TiE Nagpur Event"></div>
+                    <div class="slide"><img src="images/slide-2.jpg" class="slide-image" alt="TiE Nagpur Meeting"></div>
+                    <div class="slide"><img src="images/slide-3.jpg" class="slide-image" alt="Audience at a TiE Nagpur Event"></div>
+                    <div class="slide"><img src="images/slide-4.jpg" class="slide-image" alt="TiE Nagpur Session"></div>
+                </div>
+
+                <!-- Overlay Content -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4 z-10">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">Fostering Entrepreneurship in Nagpur</h1>
+                    <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 drop-shadow-md">Connecting entrepreneurs with mentors, investors, and a global network to help them succeed.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#membership" class="nav-link text-white px-8 py-3 rounded-full font-semibold transition-transform transform hover:scale-105" style="background-color: #C8102E; border: 2px solid white;">Become a Member</a>
+                        <a href="#events" class="nav-link bg-gray-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-600 transition-transform transform hover:scale-105">Upcoming Events</a>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <button id="prev-slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-20 hover:bg-opacity-75 transition"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-20 hover:bg-opacity-75 transition"><i class="fas fa-chevron-right"></i></button>
+                <div id="slide-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20"></div>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="about" class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Welcome to TiE Nagpur</h2>
+                    <div class="flex flex-col md:flex-row items-center gap-12">
+                        <div class="md:w-1/2">
+                            <img src="images/gallery-1.jpg" alt="A diverse group of entrepreneurs at a TiE Nagpur networking event" class="rounded-xl shadow-lg w-full">
+                        </div>
+                        <div class="md:w-1/2 text-lg text-gray-600 space-y-4">
+                            <p>The Indus Entrepreneurs (TiE) was founded in 1992 in Silicon Valley by a group of successful entrepreneurs, corporate executives, and senior professionals with roots in the Indus region.</p>
+                            <p>TiE Nagpur is a chapter of this global non-profit organization, dedicated to fostering entrepreneurship in the Nagpur region. We provide a platform for startups, entrepreneurs, and aspiring business leaders to connect, learn, and grow through mentorship, networking, education, funding, and incubation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Events Section -->
+            <section id="events" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Upcoming Events</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out">
+                             <!-- Make sure foodpreneurs.png is in the 'images' folder -->
+                            <img src="images/foodpreneurs.png" alt="Foodpreneurs Nagpur Event" class="w-full h-48 object-contain">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl mb-2 text-gray-800">Foodpreneurs</h3>
+                                <p class="text-gray-600 text-sm mb-4"><i class="fas fa-calendar-alt mr-2"></i>Coming Soon</p>
+                                <a href="https://events.tie.org/Foodpreneurs" target="_blank" class="text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 transition w-full block text-center" style="background-color: #C8102E;">Register Now</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out">
+                            <img src="images/tie-university.jpg" alt="Promotional image for TiE University" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/AAAAAA?text=TiE+University';">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl mb-2 text-gray-800">TiE University</h3>
+                                <p class="text-gray-600 text-sm mb-4"><i class="fas fa-calendar-alt mr-2"></i>Coming Soon</p>
+                                <a href="#" class="text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 transition w-full block text-center" style="background-color: #C8102E;">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Membership Section -->
+            <section id="membership" class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Choose Your Membership</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Student Membership -->
+                        <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center flex flex-col">
+                            <h3 class="text-2xl font-bold tie-red-text mb-4">Student Member</h3>
+                            <p class="text-4xl font-bold text-gray-800 mb-4">₹1,416 <span class="text-lg font-normal">/ year</span></p>
+                            <ul class="text-left space-y-2 text-gray-600 mb-8 flex-grow">
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Access to select TiE events</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Networking with student entrepreneurs</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> TiE University program access</li>
+                            </ul>
+                            <a href="https://bit.ly/4cU8tNV" target="_blank" class="bg-gray-300 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-400 transition w-full">Join Now</a>
+                        </div>
+                        <!-- Associate Membership -->
+                        <div class="bg-white rounded-xl shadow-lg p-8 text-center ring-2 ring-red-500 flex flex-col">
+                            <h3 class="text-2xl font-bold tie-red-text mb-4">Associate Member</h3>
+                            <p class="text-4xl font-bold text-gray-800 mb-4">₹5,899 <span class="text-lg font-normal">/ year</span></p>
+                            <ul class="text-left space-y-2 text-gray-600 mb-8 flex-grow">
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Full access to all TiE Nagpur events</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Global networking opportunities</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Mentoring and clinic sessions</li>
+                            </ul>
+                            <a href="https://bit.ly/4cU8tNV" target="_blank" class="text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition w-full" style="background-color: #C8102E;">Join Now</a>
+                        </div>
+                        <!-- Affiliate Membership -->
+                        <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center flex flex-col">
+                            <h3 class="text-2xl font-bold tie-red-text mb-4">Affiliate Member</h3>
+                             <p class="text-3xl font-bold text-gray-800 mb-1">₹17,700 <span class="text-base font-normal">One-time</span></p>
+                             <p class="text-3xl font-bold text-gray-800 mb-4">+ ₹17,700 <span class="text-base font-normal">Annual</span></p>
+                            <ul class="text-left space-y-2 text-gray-600 mb-8 flex-grow">
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> For Entrepreneurs & Startups</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Premium event access</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Discounted global event access</li>
+                            </ul>
+                            <a href="https://bit.ly/4cU8tNV" target="_blank" class="bg-gray-300 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-400 transition w-full">Join Now</a>
+                        </div>
+                        <!-- Charter Membership -->
+                        <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center flex flex-col">
+                            <h3 class="text-2xl font-bold tie-red-text mb-4">Charter Member</h3>
+                            <p class="text-3xl font-bold text-gray-800 mb-4">By Invitation</p>
+                            <ul class="text-left space-y-2 text-gray-600 mb-8 flex-grow">
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> For established leaders</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Opportunity to mentor</li>
+                                <li class="flex items-start"><i class="fas fa-check-circle tie-red-text mt-1 mr-2"></i> Exclusive networking events</li>
+                            </ul>
+                            <a href="https://bit.ly/4cU8tNV" target="_blank" class="bg-gray-300 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-400 transition w-full">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Board & Members Content -->
+        <div id="board" class="main-tab-content hidden">
+            <div class="container mx-auto px-6 py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Our Board</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center mb-16">
+                    <!-- Board Member Photos: Save as sameer-bendre.jpg, etc. in 'images' -->
+                    <div class="text-center bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <img src="images/sameer-bendre.jpg" alt="Headshot of Sameer Bendre, President" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="font-bold text-xl text-gray-800">Sameer Bendre</h4>
+                        <p class="tie-red-text font-semibold">President</p>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <img src="images/dheeraj-bhagat.jpg" alt="Headshot of Dheeraj Bhagat, Secretary" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/160x160/E2E8F0/AAAAAA?text=Photo';">
+                        <h4 class="font-bold text-xl text-gray-800">Dheeraj Bhagat</h4>
+                        <p class="tie-red-text font-semibold">Secretary</p>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+                        <img src="images/ajit-dharmik.jpg" alt="Headshot of Ajit Dharmik, Treasurer" class="w-40 h-40 rounded-full mx-auto mb-4 shadow-lg object-cover">
+                        <h4 class="font-bold text-xl text-gray-800">Ajit Dharmik</h4>
+                        <p class="tie-red-text font-semibold">Treasurer</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Our Members</h2>
+                <div class="border-b border-gray-200 mb-8">
+                    <nav class="flex flex-wrap justify-center -mb-px space-x-6" aria-label="Tabs">
+                        <button class="member-tab-button whitespace-nowrap py-4 px-1 border-b-4 font-medium text-lg" data-member-tab="charter-members">Charter Members</button>
+                        <button class="member-tab-button whitespace-nowrap py-4 px-1 border-b-4 font-medium text-lg" data-member-tab="associate-members">Associate Members</button>
+                        <button class="member-tab-button whitespace-nowrap py-4 px-1 border-b-4 font-medium text-lg" data-member-tab="student-members">Student Members</button>
+                    </nav>
+                </div>
+
+                <!-- Member Sections -->
+                <div id="charter-members" class="member-tab-content">
+                     <!-- Charter Member Photos: Save as neeraja-karthik.jpg, etc. in 'images' -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                        <div class="text-center"><img src="images/neeraja-karthik.jpg" alt="Headshot of Neeraja Karthik" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover"><h4 class="font-bold">Mrs. Neeraja Karthik</h4></div>
+                        <div class="text-center"><img src="images/shashank-garg.jpg" alt="Headshot of Shashank Garg" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover"><h4 class="font-bold">Shashank Garg</h4></div>
+                        <div class="text-center"><img src="images/ajit-dharmik.jpg" alt="Headshot of Ajit Dharmik" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover"><h4 class="font-bold">Ajit Dharmik</h4></div>
+                        <div class="text-center"><img src="images/swati-thakkar.jpg" alt="Headshot of Swati Thakkar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover"><h4 class="font-bold">Swati Thakkar</h4></div>
+                        <div class="text-center"><img src="images/vishnu-tambi.jpg" alt="Headshot of Vishnu Tambi" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover"><h4 class="font-bold">Vishnu Tambi</h4></div>
+                        <div class="text-center"><img src="images/shashikant-chaudhary.jpg" alt="Headshot of Shashikant Chaudhary" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover"><h4 class="font-bold">Shashikant Chaudhary</h4></div>
+                        <div class="text-center"><img src="images/ajay-kapoor.jpg" alt="Headshot of Ajay Kapoor" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover"><h4 class="font-bold">Ajay Kapoor</h4></div>
+                        <div class="text-center"><img src="images/sameer-bendre.jpg" alt="Headshot of Sameer Bendre" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover"><h4 class="font-bold">Sameer Bendre</h4></div>
+                    </div>
+                </div>
+                <div id="associate-members" class="member-tab-content hidden"><p class="text-center text-lg text-gray-600">We have over 50+ Associate Members.</p></div>
+                <div id="student-members" class="member-tab-content hidden"><p class="text-center text-lg text-gray-600">We have over 100+ Student Members.</p></div>
+            </div>
+        </div>
+
+        <!-- Gallery Content -->
+        <div id="gallery" class="main-tab-content hidden">
+            <div class="container mx-auto px-6 py-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Event Gallery</h2>
+                 <!-- Gallery Photos: Save as gallery-1.jpg, gallery-2.jpg etc. in 'images' -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <img src="images/gallery-1.jpg" alt="Audience at a TiE Nagpur seminar" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-2.jpg" alt="Two speakers at a TiE Nagpur event" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-3.jpg" alt="A member asking a question" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-4.jpg" alt="A fireside chat at a TiE Nagpur event" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-5.jpg" alt="Members listening to a presentation" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-6.jpg" alt="A group photo of TiE Nagpur members" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-7.jpg" alt="A member speaking at an event" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-8.jpg" alt="A member speaking at a seminar" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-9.jpg" alt="A speaker receiving flowers" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="images/gallery-10.jpg" alt="Two members shaking hands" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="images/logo.png" alt="TiE Nagpur Logo" class="h-14 mb-4">
+                    <p class="text-gray-400">Fostering the next wave of entrepreneurship.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="main-tab-link text-gray-400 hover:text-white" data-tab="home">Home</a></li>
+                        <li><a href="#" class="main-tab-link text-gray-400 hover:text-white" data-tab="board">Board & Members</a></li>
+                        <li><a href="#" class="main-tab-link text-gray-400 hover:text-white" data-tab="gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+                    <p class="text-gray-400">2nd Floor, Mokha Tower<br>Trimurti Nagar, Nagpur</p>
+                    <p class="text-gray-400 mt-2">Phone: <a href="tel:9595568009" class="hover:text-white">9595568009</a></p>
+                    <p class="text-gray-400 mt-2">Email: <a href="mailto:ed@nagpur.tie.org" class="hover:text-white">ed@nagpur.tie.org</a></p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 TiE Nagpur. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Main page tabs (Home, Board & Members, Gallery)
+            const mainTabLinks = document.querySelectorAll('.main-tab-link');
+            const mainTabContents = document.querySelectorAll('.main-tab-content');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function showTab(tabId) {
+                mainTabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                const activeTab = document.getElementById(tabId);
+                if (activeTab) {
+                    activeTab.classList.remove('hidden');
+                }
+            }
+
+            mainTabLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const tab = link.getAttribute('data-tab');
+                    showTab(tab);
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            navLinks.forEach(link => {
+                 link.addEventListener('click', (e) => {
+                    showTab('home');
+                 });
+            });
+
+
+            // Member type tabs
+            const memberTabButtons = document.querySelectorAll('.member-tab-button');
+            const memberTabContents = document.querySelectorAll('.member-tab-content');
+            
+            function setActiveMemberTab(button) {
+                const memberTab = button.getAttribute('data-member-tab');
+                memberTabButtons.forEach(btn => {
+                    btn.classList.remove('active', 'border-red-700', 'text-red-700');
+                    btn.classList.add('border-transparent', 'text-gray-500');
+                });
+                button.classList.add('active', 'border-red-700', 'text-red-700');
+                memberTabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(memberTab).classList.remove('hidden');
+            }
+
+            if (memberTabButtons.length > 0) {
+                setActiveMemberTab(memberTabButtons[0]);
+                memberTabButtons.forEach(button => {
+                    button.addEventListener('click', () => setActiveMemberTab(button));
+                });
+            }
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Slideshow logic
+            const slides = document.querySelectorAll('.slide');
+            const dotsContainer = document.getElementById('slide-dots');
+            let currentSlide = 0;
+            let slideInterval;
+
+            if (slides.length > 0) {
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-white', 'bg-opacity-50', 'hover:bg-opacity-100', 'transition');
+                    dot.addEventListener('click', () => goToSlide(i));
+                    dotsContainer.appendChild(dot);
+                });
+
+                const dots = dotsContainer.querySelectorAll('button');
+
+                function goToSlide(n) {
+                    slides[currentSlide].classList.remove('active');
+                    dots[currentSlide].classList.remove('bg-opacity-100');
+                    currentSlide = (n + slides.length) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                    dots[currentSlide].classList.add('bg-opacity-100');
+                    resetInterval();
+                }
+
+                function nextSlide() { goToSlide(currentSlide + 1); }
+                function prevSlide() { goToSlide(currentSlide - 1); }
+                function resetInterval() {
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, 5000);
+                }
+
+                document.getElementById('next-slide').addEventListener('click', nextSlide);
+                document.getElementById('prev-slide').addEventListener('click', prevSlide);
+                goToSlide(0);
+            }
+        });
+    </script>
+
+</body>
+</html>
+
