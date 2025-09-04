@@ -75,6 +75,11 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/tie-university-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -84,12 +89,12 @@
         <nav class="w-full px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="#">
-                    <!-- Make sure logo.png is in the 'images' folder -->
                     <img src="images/logo.png" alt="TiE Nagpur Logo" class="h-14">
                 </a>
             </div>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#" class="main-tab-link text-gray-600 hover:tie-red-text transition" data-tab="home">Home</a>
+                <a href="#" class="main-tab-link text-gray-600 hover:tie-red-text transition" data-tab="tie-university">TiE University</a>
                 <a href="#" class="main-tab-link text-gray-600 hover:tie-red-text transition" data-tab="board">Board & Members</a>
                 <a href="#" class="main-tab-link text-gray-600 hover:tie-red-text transition" data-tab="gallery">Gallery</a>
                 <a href="#membership" class="nav-link text-gray-600 hover:tie-red-text transition">Membership</a>
@@ -105,6 +110,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white">
             <a href="#" class="main-tab-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" data-tab="home">Home</a>
+            <a href="#" class="main-tab-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" data-tab="tie-university">TiE University</a>
             <a href="#" class="main-tab-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" data-tab="board">Board & Members</a>
             <a href="#" class="main-tab-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" data-tab="gallery">Gallery</a>
             <a href="#membership" class="nav-link block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Membership</a>
@@ -118,15 +124,12 @@
         <div id="home" class="main-tab-content">
             <!-- Slideshow Hero Section -->
             <section id="slideshow-container" class="relative w-full h-[70vh] overflow-hidden">
-                <!-- Slides: Make sure these images are in the 'images' folder -->
                 <div class="absolute inset-0 w-full h-full">
                     <div class="slide active"><img src="images/slide-1.jpg" class="slide-image" alt="TiE Nagpur Event"></div>
                     <div class="slide"><img src="images/slide-2.jpg" class="slide-image" alt="TiE Nagpur Meeting"></div>
                     <div class="slide"><img src="images/slide-3.jpg" class="slide-image" alt="Audience at a TiE Nagpur Event"></div>
                     <div class="slide"><img src="images/slide-4.jpg" class="slide-image" alt="TiE Nagpur Session"></div>
                 </div>
-
-                <!-- Overlay Content -->
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4 z-10">
                     <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">Fostering Entrepreneurship in Nagpur</h1>
                     <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 drop-shadow-md">Connecting entrepreneurs with mentors, investors, and a global network to help them succeed.</p>
@@ -135,13 +138,11 @@
                         <a href="#events" class="nav-link bg-gray-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-600 transition-transform transform hover:scale-105">Upcoming Events</a>
                     </div>
                 </div>
-                <!-- Navigation -->
                 <button id="prev-slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-20 hover:bg-opacity-75 transition"><i class="fas fa-chevron-left"></i></button>
                 <button id="next-slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-20 hover:bg-opacity-75 transition"><i class="fas fa-chevron-right"></i></button>
                 <div id="slide-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20"></div>
             </section>
 
-            <!-- About Us Section -->
             <section id="about" class="py-20 bg-white animate-on-scroll">
                 <div class="container mx-auto px-6">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Welcome to TiE Nagpur</h2>
@@ -157,13 +158,11 @@
                 </div>
             </section>
 
-            <!-- Upcoming Events Section -->
             <section id="events" class="py-20 bg-gray-50">
                 <div class="container mx-auto px-6">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center animate-on-scroll">Upcoming Events</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out animate-on-scroll">
-                             <!-- Make sure foodpreneurs.png is in the 'images' folder -->
+                    <div class="flex justify-center">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out animate-on-scroll max-w-md">
                             <img src="images/foodpreneurs.png" alt="Foodpreneurs Nagpur Event" class="w-full h-48 object-contain">
                             <div class="p-6">
                                 <h3 class="font-bold text-xl mb-2 text-gray-800">Foodpreneurs</h3>
@@ -171,24 +170,14 @@
                                 <a href="https://events.tie.org/Foodpreneurs" target="_blank" class="text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 transition w-full block text-center" style="background-color: #C8102E;">Register Now</a>
                             </div>
                         </div>
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out animate-on-scroll" style="transition-delay: 100ms;">
-                            <img src="images/tie-university.jpg" alt="Promotional image for TiE University" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E2E8F0/AAAAAA?text=TiE+University';">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2 text-gray-800">TiE University</h3>
-                                <p class="text-gray-600 text-sm mb-4"><i class="fas fa-calendar-alt mr-2"></i>Coming Soon</p>
-                                <a href="#" class="text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 transition w-full block text-center" style="background-color: #C8102E;">Learn More</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Membership Section -->
             <section id="membership" class="py-20 bg-white">
                 <div class="container mx-auto px-6">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center animate-on-scroll">Choose Your Membership</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <!-- Student Membership -->
                         <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center flex flex-col animate-on-scroll">
                             <h3 class="text-2xl font-bold tie-red-text mb-4">Student Member</h3>
                             <p class="text-4xl font-bold text-gray-800 mb-4">₹1,416 <span class="text-lg font-normal">/ year</span></p>
@@ -199,7 +188,6 @@
                             </ul>
                             <a href="https://bit.ly/4cU8tNV" target="_blank" class="bg-gray-300 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-400 transition w-full">Join Now</a>
                         </div>
-                        <!-- Associate Membership -->
                         <div class="bg-white rounded-xl shadow-lg p-8 text-center ring-2 ring-red-500 flex flex-col animate-on-scroll" style="transition-delay: 100ms;">
                             <h3 class="text-2xl font-bold tie-red-text mb-4">Associate Member</h3>
                             <p class="text-4xl font-bold text-gray-800 mb-4">₹5,899 <span class="text-lg font-normal">/ year</span></p>
@@ -210,7 +198,6 @@
                             </ul>
                             <a href="https://bit.ly/4cU8tNV" target="_blank" class="text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition w-full" style="background-color: #C8102E;">Join Now</a>
                         </div>
-                        <!-- Affiliate Membership -->
                         <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center flex flex-col animate-on-scroll" style="transition-delay: 200ms;">
                             <h3 class="text-2xl font-bold tie-red-text mb-4">Affiliate Member</h3>
                              <p class="text-3xl font-bold text-gray-800 mb-1">₹17,700 <span class="text-base font-normal">One-time</span></p>
@@ -222,7 +209,6 @@
                             </ul>
                             <a href="https://bit.ly/4cU8tNV" target="_blank" class="bg-gray-300 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-400 transition w-full">Join Now</a>
                         </div>
-                        <!-- Charter Membership -->
                         <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center flex flex-col animate-on-scroll" style="transition-delay: 300ms;">
                             <h3 class="text-2xl font-bold tie-red-text mb-4">Charter Member</h3>
                             <p class="text-3xl font-bold text-gray-800 mb-4">By Invitation</p>
@@ -234,6 +220,106 @@
                             <a href="https://bit.ly/4cU8tNV" target="_blank" class="bg-gray-300 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-400 transition w-full">Apply Now</a>
                         </div>
                     </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- TiE University Content -->
+        <div id="tie-university" class="main-tab-content hidden">
+             <section class="hero-bg text-white py-24">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-on-scroll">TiE University Program</h1>
+                    <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto animate-on-scroll" style="transition-delay: 100ms;">A Global Competition for University Entrepreneurs</p>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 animate-on-scroll">About the Program</h2>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto animate-on-scroll">
+                        TiE University is a flagship initiative of The Indus Entrepreneurs (TiE) aimed at fostering entrepreneurship among college students. It provides a platform for aspiring student entrepreneurs to pitch their business ideas, receive mentorship from seasoned professionals, and compete for substantial cash prizes and recognition. The program runs across TiE chapters globally, culminating in a Global Finals where the best teams from around the world compete.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center animate-on-scroll">Why Participate?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll">
+                            <i class="fas fa-hands-helping fa-3x tie-red-text mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Mentorship</h3>
+                            <p class="text-gray-600">Get guidance from experienced entrepreneurs, investors, and industry experts from the TiE network.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll" style="transition-delay: 100ms;">
+                            <i class="fas fa-network-wired fa-3x tie-red-text mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Networking</h3>
+                            <p class="text-gray-600">Connect with a global community of peers, mentors, and potential investors.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll" style="transition-delay: 200ms;">
+                            <i class="fas fa-trophy fa-3x tie-red-text mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Win Prizes</h3>
+                            <p class="text-gray-600">Compete for a significant prize pool, with prizes over $100,000 at the Global Finals.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <section class="py-20 bg-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 animate-on-scroll">Who Can Participate?</h2>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto animate-on-scroll">
+                        The competition is open to teams of college/university students. To be eligible, your startup must have at least one student founder who is currently enrolled in a college or university. The program is designed for early-stage startups who have not raised more than a seed round of funding.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center animate-on-scroll">Competition Timeline</h2>
+                    <div class="relative max-w-4xl mx-auto">
+                        <div class="absolute left-1/2 w-0.5 h-full bg-gray-300 transform -translate-x-1/2"></div>
+                        <div class="mb-8 flex justify-between items-center w-full animate-on-scroll">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-red-500 shadow-xl w-12 h-12 rounded-full">
+                                <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+                            </div>
+                            <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                <h3 class="font-bold text-gray-800 text-xl">Chapter Finals</h3>
+                                <p class="text-sm leading-snug tracking-wide text-gray-600">Compete at the TiE Nagpur chapter level against local teams.</p>
+                            </div>
+                        </div>
+                        <div class="mb-8 flex justify-between flex-row-reverse items-center w-full animate-on-scroll">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-red-500 shadow-xl w-12 h-12 rounded-full">
+                                <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+                            </div>
+                            <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                <h3 class="font-bold text-gray-800 text-xl">Global Quarter-Finals</h3>
+                                <p class="text-sm leading-snug tracking-wide text-gray-600">Winners from each chapter compete in a virtual round.</p>
+                            </div>
+                        </div>
+                        <div class="mb-8 flex justify-between items-center w-full animate-on-scroll">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-red-500 shadow-xl w-12 h-12 rounded-full">
+                                <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+                            </div>
+                            <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                <h3 class="font-bold text-gray-800 text-xl">Global Finals</h3>
+                                <p class="text-sm leading-snug tracking-wide text-gray-600">The top teams pitch to a global audience of investors and entrepreneurs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 animate-on-scroll">Ready to Take the Leap?</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8 animate-on-scroll">
+                        If you are a student with a game-changing idea, TiE University is the perfect platform to launch your entrepreneurial journey.
+                    </p>
+                    <a href="#" class="text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-red-700 transition animate-on-scroll" style="background-color: #C8102E;">Register Your Team Now</a>
                 </div>
             </section>
         </div>
@@ -337,183 +423,152 @@
 
                 <!-- Member Sections -->
                 <div id="charter-members" class="member-tab-content">
-                     <!-- Charter Member Photos: Save with corresponding names in 'images' folder -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-                        <!-- Member 1 -->
+                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/r-ramakrishnan.jpg" alt="Headshot of R Ramakrishnan" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">R Ramakrishnan</h4>
                             <p class="text-gray-500 text-sm">Co-founder & CEO, ImmverseAI</p>
                         </div>
-                        <!-- Member 2 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/prashant-godbole.jpg" alt="Headshot of Prashant Godbole" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Prashant Godbole</h4>
                             <p class="text-gray-500 text-sm">Director, Godbole Gates Pvt. Ltd.</p>
                         </div>
-                        <!-- Member 3 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/dilip-kamdar.jpg" alt="Headshot of Dilip Kamdar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Dilip Kamdar</h4>
                             <p class="text-gray-500 text-sm">Co-Founder, Naivedyam Hospitality</p>
                         </div>
-                        <!-- Member 4 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/saching-yete.jpg" alt="Headshot of Sachin Yete" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Sachin Yete</h4>
                             <p class="text-gray-500 text-sm">Co-Founder, V Das Associates</p>
                         </div>
-                        <!-- Member 5 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/nitin-sachdeva.jpg" alt="Headshot of Nitin Sachdeva" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Nitin Sachdeva</h4>
                             <p class="text-gray-500 text-sm">Founder, Delaplex</p>
                         </div>
-                        <!-- Member 6 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/pankaj-agrawal.jpg" alt="Headshot of Pankaj Agrawal" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Pankaj Agrawal</h4>
                             <p class="text-gray-500 text-sm">Co-Founder & CEO, KC Overseas Education</p>
                         </div>
-                        <!-- Member 7 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/milind-chittawar.jpg" alt="Headshot of Milind Chittawar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Milind Chittawar</h4>
                             <p class="text-gray-500 text-sm">CEO, SEE-Tech Solutions Pvt. Ltd.</p>
                         </div>
-                        <!-- Member 8 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/ghanshyam-ahuja.jpg" alt="Headshot of Ghanshyam Ahuja" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Ghanshyam Ahuja</h4>
                             <p class="text-gray-500 text-sm">CEO, ThinKuvate</p>
                         </div>
-                        <!-- Member 9 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/rahul-dixit.jpg" alt="Headshot of Rahul Dixit" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Rahul Dixit</h4>
                             <p class="text-gray-500 text-sm">MSME Director, Dicksons Engineering</p>
                         </div>
-                        <!-- Member 10 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/aditya-saraf.jpg" alt="Headshot of Aditya Saraf" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Aditya Saraf</h4>
                             <p class="text-gray-500 text-sm">Director, Nice Imports</p>
                         </div>
-                        <!-- Member 11 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/sahil-chawla.jpg" alt="Headshot of Sahil Chawla" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Sahil Chawla</h4>
                             <p class="text-gray-500 text-sm">Co-Founder, Tsecond Inc.</p>
                         </div>
-                        <!-- Member 12 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/nakul-sarda.jpg" alt="Headshot of Nakul Sarda" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Nakul Sarda</h4>
                             <p class="text-gray-500 text-sm">Founder & Partner, Profigate Capital Services</p>
                         </div>
-                        <!-- Member 13 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/poonam-khandelwal.jpg" alt="Headshot of Poonam Khandelwal" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Poonam Khandelwal</h4>
                             <p class="text-gray-500 text-sm">Venture Partner, Venture Catalysts</p>
                         </div>
-                        <!-- Member 14 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/rahul-bajait.jpg" alt="Headshot of Rahul Bajait" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Rahul Bajait</h4>
                             <p class="text-gray-500 text-sm">Co-Founder, Pragmatyc</p>
                         </div>
-                        <!-- Member 15 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/ashish-awasthi.jpg" alt="Headshot of Ashish Awasthi" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Ashish Awasthi</h4>
                             <p class="text-gray-500 text-sm">Co-Founder Director, Infosubway</p>
                         </div>
-                        <!-- Member 16 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/samit-singhai.jpg" alt="Headshot of Samit Singhai" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Samit Singhai</h4>
                             <p class="text-gray-500 text-sm">Co-founder, Asset Chain Techlligence pvt. Ltd</p>
                         </div>
-                        <!-- Member 17 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/rajesh-rathi.jpg" alt="Headshot of Rajesh Rathi" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Rajesh Rathi</h4>
                             <p class="text-gray-500 text-sm">CEO & Owner, Kr Eximtrade Techno Solutions pvt ltd</p>
                         </div>
-                        <!-- Member 18 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/savita-mokha.jpg" alt="Headshot of Savita Mokha" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Savita Mokha</h4>
                             <p class="text-gray-500 text-sm">Director, AM Architech</p>
                         </div>
-                        <!-- Member 19 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/harish-taori.jpg" alt="Headshot of Harish Taori" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Harish Taori</h4>
                             <p class="text-gray-500 text-sm">Founder & CEO, Samta.ai</p>
                         </div>
-                        <!-- Member 20 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/amit-panchmatiya.jpg" alt="Headshot of Amit Panchmatiya" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Amit Panchmatiya</h4>
                             <p class="text-gray-500 text-sm">Managing Director, Air Developers</p>
                         </div>
-                        <!-- Member 21 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/mayur-zanwar.jpg" alt="Headshot of Mayur Zanwar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Mayur Zanwar</h4>
                             <p class="text-gray-500 text-sm">Co-founder, TruScholar</p>
                         </div>
-                        <!-- Member 22 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/manish-sachdeva.jpg" alt="Headshot of Manish Sachdeva" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Manish Sachdeva</h4>
                             <p class="text-gray-500 text-sm">CEO, Delaplex Software</p>
                         </div>
-                        <!-- Member 23 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/nitin-alsi.jpg" alt="Headshot of Nitin Alsi" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Nitin Alsi</h4>
                             <p class="text-gray-500 text-sm">Managing Partner, Nitin Alsi & Associates</p>
                         </div>
-                        <!-- Member 24 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/medha-sutaria.jpg" alt="Headshot of Medha Sutaria" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Medha Sutaria</h4>
                             <p class="text-gray-500 text-sm">Founder & CEO, White cube Solutions</p>
                         </div>
-                        <!-- Member 25 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/rahul-soni.jpg" alt="Headshot of Rahul Soni" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Rahul Soni</h4>
                             <p class="text-gray-500 text-sm">CEO, Soni Polymers Pvt.Ltd</p>
                         </div>
-                        <!-- Member 26 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/praful-lichade.jpg" alt="Headshot of Praful Lichade" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Praful Lichade</h4>
                             <p class="text-gray-500 text-sm">CEO, Pragmatyc</p>
                         </div>
-                        <!-- Member 27 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/sandeep-bhartiya.jpg" alt="Headshot of Sandeep Bhartiya" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Sandeep Bhartiya</h4>
                             <p class="text-gray-500 text-sm">Director, GRESPL</p>
                         </div>
-                        <!-- Member 28 -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/sarang-upganlawar.jpg" alt="Headshot of Sarang Upganlawar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Sarang Upganlawar</h4>
                             <p class="text-gray-500 text-sm">Director, ICAD School of learning</p>
                         </div>
-                        <!-- Neeraja Kartik -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/neeraja-karthik.jpg" alt="Headshot of Neeraja Kartik" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Neeraja Kartik</h4>
                             <p class="text-gray-500 text-sm">Owner, Insolvency Professional</p>
                         </div>
-                        <!-- Paresh Raja -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/paresh-raja.jpg" alt="Headshot of Paresh Raja" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Paresh Raja</h4>
@@ -523,209 +578,174 @@
                 </div>
                 <div id="associate-members" class="member-tab-content hidden">
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-                        <!-- Abhay Harane -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/abhay-harane.jpg" alt="Headshot of Abhay Harane" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Abhay Harane</h4>
                             <p class="text-gray-500 text-sm">Founder Director at Swaavalamban Udyog Pvt Ltd</p>
                         </div>
-                        <!-- Prateek Ghumare -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/prateek-ghumare.jpg" alt="Headshot of Prateek Ghumare" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Prateek Ghumare</h4>
                             <p class="text-gray-500 text-sm">Founder & CEO of Dataventics Software Solutions</p>
                         </div>
-                        <!-- Shashikant Deshpande -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/shashikant-deshpande.jpg" alt="Headshot of Shashikant Deshpande" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Shashikant Deshpande</h4>
                             <p class="text-gray-500 text-sm">Managing Director of Soft Polynomials Pvt. Ltd</p>
                         </div>
-                        <!-- Anurag Bhartia -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/anurag-bhartia.jpg" alt="Headshot of Anurag Bhartia" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Anurag Bhartia</h4>
                             <p class="text-gray-500 text-sm">Founder of Tacktile Systems</p>
                         </div>
-                        <!-- Amit Yenurkar -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/amit-yenurkar.jpg" alt="Headshot of Amit Yenurkar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Amit Yenurkar</h4>
                             <p class="text-gray-500 text-sm">Director of MKH Sancheti Public School & Jr. College</p>
                         </div>
-                        <!-- Ashwin Agrawal -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/ashwin-agrwal.jpg" alt="Headshot of Ashwin Agrawal" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Ashwin Agrawal</h4>
                             <p class="text-gray-500 text-sm">Consulting Expert</p>
                         </div>
-                        <!-- Nitin Jeswani -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/nitesh-jeswani.jpg" alt="Headshot of Nitin Jeswani" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Nitin Jeswani</h4>
                             <p class="text-gray-500 text-sm">Owner of J P Insurance Brokers Pvt. Ltd.</p>
                         </div>
-                        <!-- Adwait Chitaley -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/adwait-chitaley.jpg" alt="Headshot of Adwait Chitaley" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E2E8F0/AAAAAA?text=Photo';">
                             <h4 class="font-bold text-gray-800">Adwait Chitaley</h4>
                             <p class="text-gray-500 text-sm">Chartered Accountant and Lawyer</p>
                         </div>
-                        <!-- Ankit Goglani -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/ankit-goglani.jpg" alt="Headshot of Ankit Goglani" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Ankit Goglani</h4>
                              <p class="text-gray-500 text-sm">Director, Solitary Spaces</p>
                         </div>
-                         <!-- Vrinda Maheshwari -->
-                        <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
+                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/vrinda-maheshwari.jpg" alt="Headshot of Vrinda Maheshwari" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Vrinda Maheshwari</h4>
                             <p class="text-gray-500 text-sm">Agency owner at The Social Tatva</p>
                         </div>
-                        <!-- Priyesh Parekh -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/priyesh-parekh.jpg" alt="Headshot of Priyesh Parekh" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Priyesh Parekh</h4>
                             <p class="text-gray-500 text-sm">Founder, Bridge 2 Business (B2B) Community</p>
                         </div>
-                        <!-- Marimuthu Manivarma -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/marimuthu-manivarma.jpg" alt="Headshot of Marimuthu Manivarma" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Marimuthu Manivarma</h4>
                             <p class="text-gray-500 text-sm">General Manager, Jefrz Fintech Nurture</p>
                         </div>
-                        <!-- Laxman Hedaoo -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/laxman-hedaoo.jpg" alt="Headshot of Laxman Hedaoo" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Laxman Hedaoo</h4>
                             <p class="text-gray-500 text-sm">Co-Founder & CEO at Bootcoding</p>
                         </div>
-                        <!-- Nikhilesh Sawarkar -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/nikhilesh-sawarkar.jpg" alt="Headshot of Nikhilesh Sawarkar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Nikhilesh Sawarkar</h4>
                             <p class="text-gray-500 text-sm">Director, ICT MEDIA PVT LTD.</p>
                         </div>
-                        <!-- Dr Rashmi Bansal -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/rashmi-s.-bansal.jpg" alt="Headshot of Dr Rashmi Bansal" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Dr Rashmi Bansal</h4>
                             <p class="text-gray-500 text-sm">Founder of DCConsultants</p>
                         </div>
-                        <!-- Adinath Dapke -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/adinath-dapke.jpg" alt="Headshot of Adinath Dapke" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Adinath Dapke</h4>
                              <p class="text-gray-500 text-sm">Founder, TROVANDO INNOVATIONS</p>
                         </div>
-                        <!-- Ritesh Daswani -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/ritesh-daswani.jpg" alt="Headshot of Ritesh Daswani" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Ritesh Daswani</h4>
                             <p class="text-gray-500 text-sm">CPA and Associate Chartered Accountant</p>
                         </div>
-                        <!-- Manas Tijare -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/manas-tijare.jpg" alt="Headshot of Manas Tijare" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Manas Tijare</h4>
                             <p class="text-gray-500 text-sm">Co-founder & CEO, AyurvedaAtTips</p>
                         </div>
-                        <!-- Nivedita Fadnis -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/nivedita-fadnis.jpg" alt="Headshot of Nivedita Fadnis" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Nivedita Fadnis</h4>
                         </div>
-                         <!-- Abheesh Dokras -->
-                        <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
+                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/abheesh-dokras.jpg" alt="Headshot of Abheesh Dokras" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Abheesh Dokras</h4>
                             <p class="text-gray-500 text-sm">Founder & CEO of Wisbotech Communications Pvt. Ltd.</p>
                         </div>
-                        <!-- Shivam Khandelwal -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/shivam-khandelwal.jpg" alt="Headshot of Shivam Khandelwal" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Shivam Khandelwal</h4>
                             <p class="text-gray-500 text-sm">Founder & Head of Growth, Big Brancy</p>
                         </div>
-                        <!-- Haider Dhun -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/haider-dhun.jpg" alt="Headshot of Haider Dhun" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Haider Dhun</h4>
                             <p class="text-gray-500 text-sm">Director of Softflow Systems Pvt. Ltd.</p>
                         </div>
-                        <!-- Rahul Gahukar -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/rahul-gahukar.jpg" alt="Headshot of Rahul Gahukar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Rahul Gahukar</h4>
                             <p class="text-gray-500 text-sm">Founder & Director of Arjavam Aerospace (OPC) Private Limited</p>
                         </div>
-                        <!-- Zeba Mirza -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/zeba-mirza.jpg" alt="Headshot of Zeba Mirza" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Zeba Mirza</h4>
                             <p class="text-gray-500 text-sm">Personal Branding Strategist</p>
                         </div>
-                        <!-- Ravi Chawla -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/ravi-chawla.jpg" alt="Headshot of Ravi Chawla" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Ravi Chawla</h4>
                             <p class="text-gray-500 text-sm">Founder & CEO of Legal Serv</p>
                         </div>
-                        <!-- Sachin Jahagirdar -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/sachin-jahagirdar.jpg" alt="Headshot of Sachin Jahagirdar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Sachin Jahagirdar</h4>
                             <p class="text-gray-500 text-sm">Founder of AB Enterprises</p>
                         </div>
-                        <!-- Lalit Narain Meena -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
-                            <img src="images/lalit-narain.jpg" alt="Headshot of Lalit Narain Meena" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover" >
+                            <img src="images/lalit-narain.jpg" alt="Headshot of Lalit Narain" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover" >
                             <h4 class="font-bold text-gray-800">Lalit Narain</h4>
                             <p class="text-gray-500 text-sm">Smart Mobility Expert</p>
                         </div>
-                        <!-- Kamal Meshram -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/kamal-meshram.jpg" alt="Headshot of Kamal Meshram" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Kamal Meshram</h4>
                             <p class="text-gray-500 text-sm">Founder, Cinevestor</p>
                         </div>
-                        <!-- Yashwant Budhwani -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/yashwant-budhwani.jpg" alt="Headshot of Yashwant Budhwani" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Yashwant Budhwani</h4>
                             <p class="text-gray-500 text-sm">Founder & CEO, HOORA</p>
                         </div>
-                        <!-- Hemant Dasture -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/hemant-dasture.jpg" alt="Headshot of Hemant Dasture" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">CA Hemant Dasture</h4>
                             <p class="text-gray-500 text-sm">Chartered Accountant</p>
                         </div>
-                        <!-- Vinay Patri -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/vinay-patri.jpg" alt="Headshot of Vinay Patri" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Vinay Patri</h4>
                             <p class="text-gray-500 text-sm">Core Team Member at Dozen Diamond</p>
                         </div>
-                        <!-- Gaurang Dayma -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/gaurang-dayma.jpg" alt="Headshot of Gaurang Dayma" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E2E8F0/AAAAAA?text=Photo';">
                             <h4 class="font-bold text-gray-800">Gaurang Dayma</h4>
                         </div>
-                        <!-- Neeraj Gandhi -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/neeraj-gandhi.jpg" alt="Headshot of Neeraj Gandhi" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Neeraj Gandhi</h4>
                             <p class="text-gray-500 text-sm">The Proprietor - GANDHI ELECTRICALS AND SERVICES</p>
                         </div>
-                        <!-- Dr Pankaj Harkut -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/pankaj-harkut.jpg" alt="Headshot of Dr Pankaj Harkut" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Dr Pankaj Harkut</h4>
                             <p class="text-gray-500 text-sm">Founder and leader at Swasthyam Superspeciality Hospital</p>
                         </div>
-                        <!-- Tanvi Marathe -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/tanvi-marathe.jpg" alt="Headshot of Tanvi Marathe" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E2E8F0/AAAAAA?text=Photo';">
                             <h4 class="font-bold text-gray-800">Tanvi Marathe</h4>
@@ -735,52 +755,43 @@
                 </div>
                 <div id="student-members" class="member-tab-content hidden">
                      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-                        <!-- Rushikesh Burankar -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/rushikesh-burankar.jpg" alt="Headshot of Rushikesh Burankar" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Rushikesh Burankar</h4>
                             <p class="text-gray-500 text-sm">AI Automation Developer</p>
                         </div>
-                        <!-- Guru Yelane -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/guru-yelane.jpg" alt="Headshot of Guru Yelane" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Guru Yelane</h4>
                             <p class="text-gray-500 text-sm">Founder, Scrap It Up</p>
                         </div>
-                        <!-- Siddhesh Karambhe -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/siddhesh-karambhe.jpg" alt="Headshot of Siddhesh Karambhe" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Siddhesh Karambhe</h4>
                         </div>
-                        <!-- Varun Mundhada -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/varun-mundhada.jpg" alt="Headshot of Varun Mundhada" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Varun Mundhada</h4>
                             <p class="text-gray-500 text-sm">Co-Founder, KarpKala and Goodlee Ventures</p>
                         </div>
-                        <!-- Rizul Kushwaha -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/rizul-kushwaha.jpg" alt="Headshot of Rizul Kushwaha" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Rizul Kushwaha</h4>
                             <p class="text-gray-500 text-sm">Co-founder, Invetzee & Socioblix</p>
                         </div>
-                         <!-- Tanisha Jasu -->
-                        <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
+                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/tanisha-jasu.jpg" alt="Headshot of Tanisha Jasu" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Tanisha Jasu</h4>
                         </div>
-                        <!-- Shatakshi Dasture -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/shatakshi-dasture.jpg" alt="Headshot of Shatakshi Dasture" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Shatakshi Dasture</h4>
                             <p class="text-gray-500 text-sm">Ecosystem Manager, Nexus Cowork</p>
                         </div>
-                        <!-- Vibhor Pophare -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/vibhor-pophare.jpg" alt="Headshot of Vibhor Pophare" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Vibhor Pophare</h4>
                         </div>
-                        <!-- Subhas Shahu -->
                         <div class="text-center bg-white p-4 rounded-lg shadow-md animate-on-scroll">
                             <img src="images/subhas-sahu.jpg" alt="Headshot of Subhas Shahu" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg object-cover">
                             <h4 class="font-bold text-gray-800">Subhas Shahu</h4>
@@ -795,7 +806,6 @@
         <div id="gallery" class="main-tab-content hidden">
             <div class="container mx-auto px-6 py-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center animate-on-scroll">Event Gallery</h2>
-                 <!-- Gallery Photos: Save as gallery-1.jpg, gallery-2.jpg etc. in 'images' -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     <img src="images/gallery-1.jpg" alt="Audience at a TiE Nagpur seminar" class="rounded-lg shadow-lg w-full h-auto object-cover animate-on-scroll">
                     <img src="images/gallery-2.jpg" alt="Two speakers at a TiE Nagpur event" class="rounded-lg shadow-lg w-full h-auto object-cover animate-on-scroll">
@@ -830,6 +840,7 @@
                     <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#" class="main-tab-link text-gray-400 hover:text-white" data-tab="home">Home</a></li>
+                        <li><a href="#" class="main-tab-link text-gray-400 hover:text-white" data-tab="tie-university">TiE University</a></li>
                         <li><a href="#" class="main-tab-link text-gray-400 hover:text-white" data-tab="board">Board & Members</a></li>
                         <li><a href="#" class="main-tab-link text-gray-400 hover:text-white" data-tab="gallery">Gallery</a></li>
                     </ul>
@@ -871,6 +882,13 @@
                 if (activeTab) {
                     activeTab.classList.remove('hidden');
                 }
+                // Also hide member tabs when switching main tabs
+                const memberTabs = document.getElementById('board');
+                if (memberTabs && !memberTabs.classList.contains('hidden')){
+                    if(tabId !== 'board'){
+                        memberTabs.classList.add('hidden');
+                    }
+                }
             }
 
             mainTabLinks.forEach(link => {
@@ -887,7 +905,6 @@
                     showTab('home');
                  });
             });
-
 
             // Member type tabs
             const memberTabButtons = document.querySelectorAll('.member-tab-button');
@@ -981,6 +998,16 @@
             animatedElements.forEach(el => {
                 observer.observe(el);
             });
+             // Initial check for animations on load
+            setTimeout(() => {
+                document.querySelectorAll('.main-tab-content:not(.hidden) .animate-on-scroll').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if(rect.top < window.innerHeight && rect.bottom >= 0){
+                        el.classList.add('visible');
+                        observer.unobserve(el);
+                    }
+                });
+            }, 100);
         });
     </script>
 
